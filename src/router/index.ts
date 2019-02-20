@@ -7,10 +7,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/views/layout/index.vue'
-
+const path = require('path')
 Vue.use(Router)
 
-export const routes = [
+const requireAll = (requireContext: any) => {
+  const result = requireContext.keys().map(requireContext)
+  console.log('----->', result)
+  return result
+}
+const req = require.context('../views', false, /\.vue$/)
+requireAll(req)
+
+const routes = [
   {
     path: '/',
     name: 'layout',
@@ -65,6 +73,25 @@ export const routes = [
         component: () => import('@/views/镭射线条.vue'),
         meta: { title: '镭射线条' }
       },
+      {
+        path: 'hover7',
+        name: 'hover7',
+        component: () => import('@/views/查看文字效果.vue'),
+        meta: { title: '查看文字效果' }
+      },
+      {
+        path: 'hover8',
+        name: 'hover8',
+        component: () => import('@/views/交错滑动线条.vue'),
+        meta: { title: '交错滑动线条' }
+      },
+      // 加载线条
+      {
+        path: 'hover8',
+        name: 'hover8',
+        component: () => import('@/views/加载线条.vue'),
+        meta: { title: '加载线条' }
+      }
     ]
   }
 ]
