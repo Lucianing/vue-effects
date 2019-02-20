@@ -53,6 +53,18 @@ export const routes = [
         component: () => import('@/views/运动光晕效果.vue'),
         meta: { title: '运动光晕效果' }
       },
+      {
+        path: 'hover5',
+        name: 'hover5',
+        component: () => import('@/views/呼吸灯效果.vue'),
+        meta: { title: '呼吸灯效果' }
+      },
+      {
+        path: 'hover6',
+        name: 'hover6',
+        component: () => import('@/views/镭射线条.vue'),
+        meta: { title: '镭射线条' }
+      },
     ]
   }
 ]
