@@ -85,12 +85,24 @@ const routes = [
         component: () => import('@/views/交错滑动线条.vue'),
         meta: { title: '交错滑动线条' }
       },
-      // 加载线条
       {
         path: 'hover8',
         name: 'hover8',
         component: () => import('@/views/加载线条.vue'),
         meta: { title: '加载线条' }
+      },
+      {
+        path: 'canvas1',
+        name: 'canvas1',
+        component: () => import('@/views/canvas麦克风.vue'),
+        meta: { title: 'canvas麦克风' }
+      },
+      // canvas基础
+      {
+        path: 'canvas2',
+        name: 'canvas2',
+        component: () => import('@/views/canvas基础.vue'),
+        meta: { title: 'canvas基础' }
       }
     ]
   }
